@@ -75,8 +75,93 @@ O **FoodCode** é um aplicativo moderno de delivery de comida que oferece uma ex
 - **AsyncStorage** - Persistência local
 - **Expo Vector Icons** - Iconografia
 
-## 📁 Estrutura do Projeto
-. ├── README.md ├── app.json ├── assets │ └── images │ ├── android-icon-background.png │ ├── android-icon-foreground.png │ ├── favicon.png │ ├── icon.png │ └── splash-icon.png ├── components │ ├── external-link.tsx │ ├── haptic-tab.tsx │ └── ui ├── src │ ├── app │ │ ├── (tabs) │ │ │ ├── _layout.tsx │ │ │ ├── cart.tsx │ │ │ ├── home │ │ │ │ ├── index.tsx │ │ │ │ └── product-detail.tsx │ │ │ └── perfil │ │ │ ├── index.tsx │ │ │ └── favorites.tsx │ │ ├── admin │ │ │ ├── _layout.tsx │ │ │ ├── orders │ │ │ │ ├── [id].tsx │ │ │ │ └── index.tsx │ │ │ ├── products │ │ │ │ ├── create.tsx │ │ │ │ └── index.tsx │ │ │ └── users │ │ │ └── index.tsx │ │ ├── admin-login.tsx │ │ ├── checkout.tsx │ │ ├── login.tsx │ │ └── order-confirmation.tsx │ ├── components │ │ ├── Admin │ │ │ ├── MobileHeader.tsx │ │ │ └── Sidebar.tsx │ │ ├── Box │ │ ├── Button │ │ ├── CartItem │ │ ├── CategoryNav │ │ ├── Header │ │ ├── Input │ │ ├── ProductCard │ │ └── SearchBar │ ├── constants │ │ └── theme.ts │ ├── context │ │ ├── AdminContext.tsx │ │ ├── AuthContext.tsx │ │ ├── CartContext.ts │ │ ├── FavoritesContext.tsx │ │ └── ProductsContext.tsx │ ├── data │ │ ├── categories.ts │ │ └── products.ts │ ├── hooks │ │ ├── use-color-scheme.ts │ │ └── use-theme-color.ts │ ├── services │ │ └── mealApi.ts │ ├── types │ │ └── index.ts │ └── utils │ └── helpers.ts ├── package.json └── tsconfig.json
+📁 foodcode-app/
+│
+├── 📄 README.md
+├── 📄 app.json
+├── 📄 package.json
+├── 📄 tsconfig.json
+│
+├── �� assets/
+│   └── 📁 images/
+│       ├── 🖼️ android-icon-background.png
+│       ├── 🖼️ android-icon-foreground.png
+│       ├── ��️ favicon.png
+│       ├── 🖼️ icon.png
+│       └── 🖼️ splash-icon.png
+│
+├── 📁 components/
+│   ├── 📄 external-link.tsx
+│   ├── 📄 haptic-tab.tsx
+│   └── 📁 ui/
+│
+└── 📁 src/
+    ├── 📁 app/                          # 🚀 Páginas e Rotas (Expo Router)
+    │   ├── 📁 (tabs)/                   # 📱 Navegação Principal do App
+    │   │   ├── 📄 _layout.tsx
+    │   │   ├── 📄 cart.tsx
+    │   │   ├── 📁 home/
+    │   │   │   ├── 📄 index.tsx         # 🏠 Página Inicial
+    │   │   │   └── 📄 product-detail.tsx # 🔍 Detalhes do Produto
+    │   │   └── �� perfil/
+    │   │       ├── 📄 index.tsx         # 👤 Perfil do Usuário
+    │   │       └── 📄 favorites.tsx     # ❤️ Produtos Favoritos
+    │   │
+    │   ├── 📁 admin/                    # 🔧 Painel Administrativo
+    │   │   ├── 📄 _layout.tsx
+    │   │   ├── 📁 orders/
+    │   │   │   ├── 📄 [id].tsx          # 📋 Detalhes do Pedido
+    │   │   │   └── �� index.tsx         # 📊 Lista de Pedidos
+    │   │   ├── 📁 products/
+    │   │   │   ├── 📄 create.tsx        # ➕ Criar Produto
+    │   │   │   └── 📄 index.tsx         # 🍔 Gestão de Produtos
+    │   │   └── 📁 users/
+    │   │       └── 📄 index.tsx         # �� Gestão de Usuários
+    │   │
+    │   ├── 📄 admin-login.tsx           # 🔐 Login Administrativo
+    │   ├── 📄 checkout.tsx              # 💳 Finalizar Pedido
+    │   ├── 📄 login.tsx                 # 🔑 Login do Cliente
+    │   └── 📄 order-confirmation.tsx    # ✅ Confirmação do Pedido
+    │
+    ├── 📁 components/                   # 🧩 Componentes Reutilizáveis
+    │   ├── 📁 Admin/
+    │   │   ├── 📄 MobileHeader.tsx      # 📱 Header Mobile Admin
+    │   │   └── 📄 Sidebar.tsx           # 📋 Sidebar Admin
+    │   ├── 📁 Box/                      # 📦 Container Layout
+    │   ├── 📁 Button/                   # 🔘 Botão Customizado
+    │   ├── 📁 CartItem/                 # 🛒 Item do Carrinho
+    │   ├── 📁 CategoryNav/              # ��️ Navegação Categorias
+    │   ├── 📁 Header/                   # 🎯 Cabeçalho Principal
+    │   ├── 📁 Input/                    # ⌨️ Campo de Entrada
+    │   ├── 📁 ProductCard/              # 🍕 Card de Produto
+    │   └── 📁 SearchBar/                # 🔍 Barra de Busca
+    │
+    ├── 📁 constants/                    # ⚙️ Configurações
+    │   └── 📄 theme.ts                  # 🎨 Tema e Cores
+    │
+    ├── 📁 context/                      # 🔄 Gerenciamento de Estado
+    │   ├── 📄 AdminContext.tsx          # 🔧 Contexto Admin
+    │   ├── 📄 AuthContext.tsx           # 🔐 Contexto Autenticação
+    │   ├── 📄 CartContext.ts            # 🛒 Contexto Carrinho
+    │   ├── 📄 FavoritesContext.tsx      # ❤️ Contexto Favoritos
+    │   └── 📄 ProductsContext.tsx       # 🍔 Contexto Produtos
+    │
+    ├── 📁 data/                         # 📊 Dados Simulados
+    │   ├── 📄 categories.ts             # 🏷️ Categorias Mock
+    │   └── 📄 products.ts               # 🍕 Produtos Mock
+    │
+    ├── 📁 hooks/                        # 🎣 Hooks Customizados
+    │   ├── 📄 use-color-scheme.ts       # 🌓 Tema Claro/Escuro
+    │   └── 📄 use-theme-color.ts        # 🎨 Cores do Tema
+    │
+    ├── 📁 services/                     # 🌐 Integrações e APIs
+    │   └── 📄 mealApi.ts                # 🍽️ API de Refeições
+    │
+    ├── 📁 types/                        # 📝 Definições TypeScript
+    │   └── 📄 index.ts                  # 🔤 Tipos Globais
+    │
+    └── 📁 utils/                        # 🛠️ Funções Utilitárias
+        └── 📄 helpers.ts                # 🔧 Funções Auxiliares
 
 
 ### **Diretórios Principais**
@@ -224,11 +309,7 @@ Enviar um email
 ⭐ Se este projeto foi útil para você, considere dar uma estrela!
 Projeto desenvolvido durante o curso de Análise e Desenvolvimento de Sistemas
 ```
-📊 Estatísticas do projeto
-Se quiser adicionar badges de estatísticas:
 
-markdown
-Copiar
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/JoaoFabris/foodcode-app)
 ![GitHub language count](https://img.shields.io/github/languages/count/JoaoFabris/foodcode-app)
