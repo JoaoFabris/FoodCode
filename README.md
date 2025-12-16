@@ -75,94 +75,58 @@ O **FoodCode** é um aplicativo moderno de delivery de comida que oferece uma ex
 - **AsyncStorage** - Persistência local
 - **Expo Vector Icons** - Iconografia
 
-📁 Estrutura do Projeto
-foodcode-app/
-│
-├── README.md
-├── app.json
-├── package.json
-├── tsconfig.json
-│
-├── assets/
-│   └── images/
-│       ├── android-icon-background.png
-│       ├── android-icon-foreground.png
-│       ├── favicon.png
-│       ├── icon.png
-│       └── splash-icon.png
-│
-├── components/
-│   ├── external-link.tsx
-│   ├── haptic-tab.tsx
-│   └── ui/
-│
-└── src/
-    ├── app/                          # Páginas e Rotas (Expo Router)
-    │   ├── (tabs)/                   # Navegação Principal
-    │   │   ├── _layout.tsx
-    │   │   ├── cart.tsx
-    │   │   ├── home/
-    │   │   │   ├── index.tsx         # Página Inicial
-    │   │   │   └── product-detail.tsx
-    │   │   └── perfil/
-    │   │       ├── index.tsx         # Perfil do Usuário
-    │   │       └── favorites.tsx
-    │   │
-    │   ├── admin/                    # Painel Administrativo
-    │   │   ├── _layout.tsx
-    │   │   ├── orders/
-    │   │   │   ├── [id].tsx          # Detalhes do Pedido
-    │   │   │   └── index.tsx         # Lista de Pedidos
-    │   │   ├── products/
-    │   │   │   ├── create.tsx        # Criar Produto
-    │   │   │   └── index.tsx         # Gestão de Produtos
-    │   │   └── users/
-    │   │       └── index.tsx         # Gestão de Usuários
-    │   │
-    │   ├── admin-login.tsx           # Login Administrativo
-    │   ├── checkout.tsx              # Finalizar Pedido
-    │   ├── login.tsx                 # Login do Cliente
-    │   └── order-confirmation.tsx    # Confirmação do Pedido
-    │
-    ├── components/                   # Componentes Reutilizáveis
-    │   ├── Admin/
-    │   │   ├── MobileHeader.tsx
-    │   │   └── Sidebar.tsx
-    │   ├── Box/
-    │   ├── Button/
-    │   ├── CartItem/
-    │   ├── CategoryNav/
-    │   ├── Header/
-    │   ├── Input/
-    │   ├── ProductCard/
-    │   └── SearchBar/
-    │
-    ├── constants/
-    │   └── theme.ts                  # Tema e Cores
-    │
-    ├── context/                      # Gerenciamento de Estado
-    │   ├── AdminContext.tsx
-    │   ├── AuthContext.tsx
-    │   ├── CartContext.ts
-    │   ├── FavoritesContext.tsx
-    │   └── ProductsContext.tsx
-    │
-    ├── data/                         # Dados Simulados
-    │   ├── categories.ts
-    │   └── products.ts
-    │
-    ├── hooks/                        # Hooks Customizados
-    │   ├── use-color-scheme.ts
-    │   └── use-theme-color.ts
-    │
-    ├── services/                     # Integrações e APIs
-    │   └── mealApi.ts
-    │
-    ├── types/                        # Definições TypeScript
-    │   └── index.ts
-    │
-    └── utils/                        # Funções Utilitárias
+rias
         └── helpers.ts
+
+## 📁 Estrutura do Projeto
+
+**Arquivos Principais:**
+- README.md
+- app.json
+- package.json
+- tsconfig.json
+
+**Assets:**
+- assets/images/ (ícones e imagens)
+
+**Código Fonte (src/):**
+
+**Páginas (app/):**
+- (tabs)/ - Navegação principal do app
+  - home/ - Página inicial e detalhes de produto
+  - perfil/ - Perfil do usuário e favoritos
+  - cart.tsx - Carrinho de compras
+- admin/ - Painel administrativo
+  - orders/ - Gestão de pedidos
+  - products/ - Gestão de produtos
+  - users/ - Gestão de usuários
+- login.tsx - Login do cliente
+- admin-login.tsx - Login do admin
+- checkout.tsx - Finalizar pedido
+
+**Componentes (components/):**
+- Admin/ - Componentes do painel admin
+- Box/ - Container de layout
+- Button/ - Botão customizado
+- CartItem/ - Item do carrinho
+- Header/ - Cabeçalho
+- ProductCard/ - Card de produto
+- SearchBar/ - Barra de busca
+
+**Estado Global (context/):**
+- AuthContext.tsx - Autenticação
+- CartContext.ts - Carrinho
+- AdminContext.tsx - Admin
+- FavoritesContext.tsx - Favoritos
+- ProductsContext.tsx - Produtos
+
+**Outros:**
+- constants/ - Tema e configurações
+- data/ - Dados simulados
+- hooks/ - Hooks customizados
+- services/ - APIs e integrações
+- types/ - Tipagem TypeScript
+- utils/ - Funções auxiliares
 
 ### **Diretórios Principais**
 - **`src/app/`** - Páginas e rotas (Expo Router)
