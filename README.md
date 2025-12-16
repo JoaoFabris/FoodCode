@@ -25,27 +25,7 @@ TypeScript - Linguagem
 Expo Router - Navegação
 Context API - Estado global
 AsyncStorage - Armazenamento local
-📁 Estrutura
-src/
-├── app/                    # Páginas
-│   ├── (tabs)/            # App principal
-│   │   ├── home/          # Início e produtos
-│   │   ├── perfil/        # Perfil e favoritos
-│   │   └── cart.tsx       # Carrinho
-│   ├── admin/             # Painel admin
-│   ├── login.tsx          # Login cliente
-│   └── admin-login.tsx    # Login admin
-├── components/            # Componentes
-├── context/               # Estado global
-├── data/                  # Dados simulados
-└── constants/             # Configurações
-🚀 Como Executar
-Pré-requisitos
-Node.js 18+
-Expo CLI
-Instalação
-bash
-Copiar
+
 
 # Clone o projeto
 git clone https://github.com/JoaoFabris/foodcode-app.git
