@@ -1,79 +1,161 @@
-FoodCode - App de Delivery
-Um aplicativo de delivery de comida desenvolvido em React Native com Expo, incluindo painel administrativo.
+# FoodCode
 
-📱 Sobre o Projeto
-App de delivery de comida com interface para clientes e painel administrativo para gestão. Desenvolvido como projeto de extensão universitária.
+## Visão Geral
 
-⚡ Funcionalidades
-App Cliente
-Login e cadastro
-Catálogo de produtos
-Carrinho de compras
-Sistema de favoritos
-Busca de produtos
-Perfil do usuário
-Painel Admin
-Dashboard com estatísticas
-Gestão de pedidos
-Gestão de produtos
-Controle de usuários
-Login separado para admin
-��️ Tecnologias
-React Native - Framework mobile
-Expo - Plataforma de desenvolvimento
-TypeScript - Linguagem
-Expo Router - Navegação
-Context API - Estado global
-AsyncStorage - Armazenamento local
+O **FoodCode** é um aplicativo mobile desenvolvido com **React Native** e **Expo**, utilizando **Expo Router** para navegação baseada em arquivos. O projeto simula um ecossistema de pedidos de comida, contemplando fluxo de usuário final (catálogo, carrinho, checkout, favoritos) e um **painel administrativo** para gestão de produtos, pedidos e usuários.
 
+Este projeto está sendo desenvolvido no contexto acadêmico (Projeto de Extensão), com foco em boas práticas de arquitetura, organização de código e experiência do usuário.
 
-# Clone o projeto
-git clone https://github.com/JoaoFabris/foodcode-app.git
-cd foodcode-app
+---
 
-# Instale dependências
+## Tecnologias Utilizadas
+
+* **React Native**
+* **Expo (SDK 54)**
+* **Expo Router** (File-based routing)
+* **TypeScript**
+* **Context API** (gerenciamento de estado)
+* **React Navigation**
+* **Async Storage**
+* **Expo Image / Image Picker**
+* **ESLint**
+
+---
+
+## Funcionalidades
+
+### Usuário Final
+
+* Listagem de produtos por categoria
+* Busca de produtos
+* Visualização de detalhes do produto
+* Adição e remoção de itens no carrinho
+* Checkout e confirmação de pedido
+* Sistema de favoritos
+* Autenticação de usuário
+
+### Área Administrativa
+
+* Login administrativo
+* Dashboard administrativo
+* Cadastro e listagem de produtos
+* Visualização de pedidos
+* Gerenciamento de usuários
+
+---
+
+## Estrutura do Projeto
+
+```bash
+src/
+├── app/                 # Rotas (Expo Router)
+│   ├── (tabs)/          # Navegação principal por abas
+│   ├── admin/           # Área administrativa
+│   ├── login.tsx        # Login do usuário
+│   ├── checkout.tsx     # Checkout
+│   └── order-confirmation.tsx
+│
+├── components/          # Componentes reutilizáveis
+├── context/             # Contextos globais (Auth, Cart, Products, etc.)
+├── constants/           # Constantes e tema
+├── data/                # Dados mockados (produtos e categorias)
+├── services/            # Serviços e integrações (API)
+├── hooks/               # Hooks customizados
+├── utils/               # Funções utilitárias
+└── types/               # Tipagens globais
+```
+
+---
+
+## Pré-requisitos
+
+* **Node.js** (versão LTS recomendada)
+* **npm** ou **yarn**
+* **Expo CLI**
+* Android Studio (para emulador Android) ou Expo Go
+
+---
+
+## Instalação e Execução
+
+1. Instale as dependências:
+
+```bash
 npm install
+```
 
-# Execute o projeto
+2. Inicie o projeto:
+
+```bash
 npx expo start
-Executar no dispositivo
-Android: Pressione a ou escaneie QR Code
-iOS: Pressione i ou escaneie QR Code
-Web: Pressione w
-�� Credenciais de Teste
-Usuário	Email	Senha
-Cliente	usuario@teste.com	123456
-Admin	admin@foodcode.com	123456
-📖 Como Usar
-Cliente
-Faça login ou crie conta
-Navegue pelos produtos
-Adicione ao carrinho
-Finalize pedido
-Admin
-Clique em ⚙️ na home
-Login com credenciais admin
-Acesse dashboard e gestão
-🎨 Tema
-Cor Principal: #FF6B35
-Cor Secundária: #2D3748
-Sucesso: #10B981
-Erro: #EF4444
-�� Scripts
-bash
-Copiar
+```
 
-npm start          # Executar desenvolvimento
-npm run android    # Executar no Android
-npm run ios        # Executar no iOS
-npm run web        # Executar no Web
-👨‍💻 Autor
-João Fabris
+3. Execute no ambiente desejado:
 
-Projeto de extensão universitária - Análise e Desenvolvimento de Sistemas
+* Emulador Android
+* Expo Go (QR Code)
+* Web
 
+---
 
-www.linkedin.com
- 
+## Scripts Disponíveis
 
-github.com
+```bash
+npm start           # Inicia o Expo
+npm run android     # Executa no Android
+npm run ios         # Executa no iOS
+npm run web         # Executa no navegador
+npm run lint        # Executa o lint
+npm run reset-project # Reseta o projeto para o estado inicial do Expo
+```
+
+---
+
+## Estado e Arquitetura
+
+O gerenciamento de estado é feito via **Context API**, com contextos dedicados para:
+
+* Autenticação (`AuthContext`)
+* Carrinho (`CartContext`)
+* Produtos (`ProductsContext`)
+* Favoritos (`FavoritesContext`)
+* Administração (`AdminContext`)
+
+Essa abordagem mantém o projeto organizado, escalável e de fácil manutenção.
+
+---
+
+## API / Dados
+
+Atualmente, o projeto utiliza **dados mockados**, localizados em:
+
+```bash
+src/data/
+```
+
+Há também uma camada de serviço preparada para integração com APIs externas:
+
+```bash
+src/services/mealApi.ts
+```
+
+---
+
+## Status do Projeto
+
+🚧 **Em desenvolvimento**
+
+Funcionalidades podem sofrer alterações conforme evolução do projeto acadêmico.
+
+---
+
+## Autor
+
+**João Fabris**
+Projeto desenvolvido para fins acadêmicos no curso de Análise e Desenvolvimento de Sistemas.
+
+---
+
+## Licença
+
+Este projeto é de uso acadêmico e educacional.
