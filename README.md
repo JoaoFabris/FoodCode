@@ -1,104 +1,109 @@
-🍔 FoodCode - App de Delivery com Painel Administrativo
-Um aplicativo completo de delivery de comida desenvolvido em React Native com Expo, incluindo sistema de autenticação, carrinho de compras e painel administrativo profissional.
+# 🍔 FoodCode - App de Delivery com Painel Administrativo
 
+<div align="center">
 
- 
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Expo](https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+
+</div>
+
+<div align="center">
+<em>Um aplicativo completo de delivery de comida desenvolvido em React Native com Expo, incluindo sistema de autenticação, carrinho de compras e painel administrativo profissional.</em>
+</div>
+
+---
+
+## 🎯 Demonstração
+
 <div align="center">
   <img src="assets/screenshots/home-screen.png" width="200" alt="Tela Inicial"/>
   <img src="assets/screenshots/product-catalog.png" width="200" alt="Catálogo"/>
   <img src="assets/screenshots/admin-dashboard.png" width="400" alt="Dashboard Admin"/>
 </div>
- 
- 
 
-📱 Sobre o Projeto
-O FoodCode é um aplicativo moderno de delivery de comida que oferece uma experiência completa tanto para clientes quanto para administradores. O projeto inclui um app mobile intuitivo para pedidos e um painel administrativo web-based para gestão completa do negócio.
+## 📱 Sobre o Projeto
 
-✨ Funcionalidades Principais
-👥 App do Cliente
-✅ Autenticação completa (Login, Registro, Logout)
-✅ Catálogo de produtos com categorias e filtros
-✅ Carrinho de compras com persistência
-✅ Sistema de favoritos
-✅ Busca avançada de produtos
-✅ Perfil do usuário editável
-✅ Histórico de pedidos
-✅ Interface responsiva e moderna
-🔧 Painel Administrativo
-✅ Dashboard com métricas em tempo real
-✅ Gestão de pedidos (visualizar, alterar status, filtros)
-✅ Gestão de produtos (listar, ativar/desativar, controle de estoque)
-✅ Autenticação separada para admins
-✅ Sidebar de navegação profissional
-✅ Relatórios visuais com indicadores
-✅ Sistema de notificações e alertas
-✅ Interface desktop-first otimizada
-🚀 Tecnologias Utilizadas
-Frontend Mobile
-React Native - Framework principal
-Expo - Toolchain e desenvolvimento
-TypeScript - Tipagem estática
-React Navigation - Navegação entre telas
-Context API - Gerenciamento de estado
-AsyncStorage - Persistência local
-Expo Vector Icons - Iconografia
-Backend (Simulado)
-Node.js - Runtime JavaScript
-Express.js - Framework web
-TypeORM - ORM para banco de dados
-PostgreSQL - Banco de dados
-JWT - Autenticação
-bcryptjs - Criptografia de senhas
+O **FoodCode** é um aplicativo moderno de delivery de comida que oferece uma experiência completa tanto para clientes quanto para administradores. O projeto inclui um app mobile intuitivo para pedidos e um painel administrativo web-based para gestão completa do negócio.
+
+## ✨ Funcionalidades Principais
+
+### 👥 **App do Cliente**
+- ✅ **Autenticação completa** (Login, Registro, Logout)
+- ✅ **Catálogo de produtos** com categorias e filtros
+- ✅ **Carrinho de compras** com persistência
+- ✅ **Sistema de favoritos**
+- ✅ **Busca avançada** de produtos
+- ✅ **Perfil do usuário** editável
+- ✅ **Histórico de pedidos**
+- ✅ **Interface responsiva** e moderna
+
+### 🔧 **Painel Administrativo**
+- ✅ **Dashboard com métricas** em tempo real
+- ✅ **Gestão de pedidos** (visualizar, alterar status, filtros)
+- ✅ **Gestão de produtos** (listar, ativar/desativar, controle de estoque)
+- ✅ **Autenticação separada** para admins
+- ✅ **Sidebar de navegação** profissional
+- ✅ **Relatórios visuais** com indicadores
+- ✅ **Sistema de notificações** e alertas
+- ✅ **Interface desktop-first** otimizada
+
+## 🚀 Tecnologias Utilizadas
+
+<div align="center">
+
+### **Frontend Mobile**
+![React Native](https://img.shields.io/badge/React_Native-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Expo](https://img.shields.io/badge/Expo-1B1F23?style=flat-square&logo=expo&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
+![React Navigation](https://img.shields.io/badge/React_Navigation-6C47FF?style=flat-square&logo=react&logoColor=white)
+
+### **Backend (Simulado)**
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white)
+
+</div>
+
+- **React Native** - Framework principal
+- **Expo** - Toolchain e desenvolvimento
+- **TypeScript** - Tipagem estática
+- **React Navigation** - Navegação entre telas
+- **Context API** - Gerenciamento de estado
+- **AsyncStorage** - Persistência local
+- **Expo Vector Icons** - Iconografia
+
+## 📁 Estrutura do Projeto
+. ├── README.md ├── app.json ├── assets │ └── images │ ├── android-icon-background.png │ ├── android-icon-foreground.png │ ├── favicon.png │ ├── icon.png │ └── splash-icon.png ├── components │ ├── external-link.tsx │ ├── haptic-tab.tsx │ └── ui ├── src │ ├── app │ │ ├── (tabs) │ │ │ ├── _layout.tsx │ │ │ ├── cart.tsx │ │ │ ├── home │ │ │ │ ├── index.tsx │ │ │ │ └── product-detail.tsx │ │ │ └── perfil │ │ │ ├── index.tsx │ │ │ └── favorites.tsx │ │ ├── admin │ │ │ ├── _layout.tsx │ │ │ ├── orders │ │ │ │ ├── [id].tsx │ │ │ │ └── index.tsx │ │ │ ├── products │ │ │ │ ├── create.tsx │ │ │ │ └── index.tsx │ │ │ └── users │ │ │ └── index.tsx │ │ ├── admin-login.tsx │ │ ├── checkout.tsx │ │ ├── login.tsx │ │ └── order-confirmation.tsx │ ├── components │ │ ├── Admin │ │ │ ├── MobileHeader.tsx │ │ │ └── Sidebar.tsx │ │ ├── Box │ │ ├── Button │ │ ├── CartItem │ │ ├── CategoryNav │ │ ├── Header │ │ ├── Input │ │ ├── ProductCard │ │ └── SearchBar │ ├── constants │ │ └── theme.ts │ ├── context │ │ ├── AdminContext.tsx │ │ ├── AuthContext.tsx │ │ ├── CartContext.ts │ │ ├── FavoritesContext.tsx │ │ └── ProductsContext.tsx │ ├── data │ │ ├── categories.ts │ │ └── products.ts │ ├── hooks │ │ ├── use-color-scheme.ts │ │ └── use-theme-color.ts │ ├── services │ │ └── mealApi.ts │ ├── types │ │ └── index.ts │ └── utils │ └── helpers.ts ├── package.json └── tsconfig.json
 
 
-📁 Estrutura do Projeto
-src/
-├── app/                          # Páginas e navegação (Expo Router)
-│   ├── (tabs)/                   # Navegação principal
-│   │   ├── home/                 # Página inicial
-│   │   ├── search/               # Busca de produtos
-│   │   ├── favorites/            # Produtos favoritos
-│   │   ├── cart/                 # Carrinho de compras
-│   │   └── profile/              # Perfil do usuário
-│   ├── admin/                    # Painel administrativo
-│   │   ├── orders/               # Gestão de pedidos
-│   │   ├── products/             # Gestão de produtos
-│   │   ├── users/                # Gestão de usuários
-│   │   ├── analytics/            # Relatórios
-│   │   └── settings/             # Configurações
-│   ├── login.tsx                 # Login do cliente
-│   ├── admin-login.tsx           # Login do admin
-│   └── order-confirmation.tsx    # Confirmação de pedido
-├── components/                   # Componentes reutilizáveis
-│   ├── Admin/                    # Componentes do admin
-│   ├── Box.tsx                   # Layout component
-│   ├── Button.tsx                # Botão customizado
-│   ├── Header/                   # Cabeçalho
-│   ├── Input.tsx                 # Input customizado
-│   ├── ProductCard.tsx           # Card de produto
-│   └── SearchBar.tsx             # Barra de busca
-├── context/                      # Gerenciamento de estado
-│   ├── AuthContext.tsx           # Autenticação do cliente
-│   ├── AdminContext.tsx          # Autenticação do admin
-│   ├── CartContext.tsx           # Carrinho de compras
-│   └── AppContext.tsx            # Estado global
-├── constants/                    # Constantes
-│   └── theme.ts                  # Tema e cores
-├── data/                         # Dados simulados
-│   └── products.ts               # Produtos mockados
-└── types/                        # Definições TypeScript
-    └── index.ts                  # Tipos globais
-🛠️ Instalação e Execução
-Pré-requisitos
-Node.js (versão 18+)
-npm ou yarn
-Expo CLI
-Android Studio (para Android) ou Xcode (para iOS)
-1. Clone o repositório
-bash
-Copiar
+### **Diretórios Principais**
+- **`src/app/`** - Páginas e rotas (Expo Router)
+- **`src/components/`** - Componentes reutilizáveis
+- **`src/context/`** - Gerenciamento de estado global
+- **`src/data/`** - Dados simulados e mockados
+- **`src/hooks/`** - Hooks customizados
+- **`src/services/`** - Integrações e APIs
+- **`src/types/`** - Definições TypeScript
+- **`src/utils/`** - Funções utilitárias
 
-git clone https://github.com/seu-usuario/foodcode-app.git
+## 🛠️ Instalação e Execução
+
+### **Pré-requisitos**
+![Node.js](https://img.shields.io/badge/Node.js-v18+-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![npm](https://img.shields.io/badge/npm-v8+-CB3837?style=flat-square&logo=npm&logoColor=white)
+![Expo](https://img.shields.io/badge/Expo_CLI-Required-1B1F23?style=flat-square&logo=expo&logoColor=white)
+
+- Node.js (versão 18+)
+- npm ou yarn
+- Expo CLI
+- Android Studio (para Android) ou Xcode (para iOS)
+
+### **1. Clone o repositório**
+```bash
+git clone https://github.com/JoaoFabris/foodcode-app.git
 cd foodcode-app
 2. Instale as dependências
 bash
@@ -117,12 +122,9 @@ Android: Pressione a no terminal ou escaneie o QR Code
 iOS: Pressione i no terminal ou escaneie o QR Code
 Web: Pressione w no terminal
 🔐 Credenciais de Teste
-Cliente
-Email: usuario@teste.com
-Senha: 123456
-Administrador
-Email: admin@foodcode.com
-Senha: 123456
+Tipo	Email	Senha
+Cliente	usuario@teste.com	123456
+Admin	admin@foodcode.com	123456
 📱 Como Usar
 App do Cliente
 Faça login ou crie uma conta
@@ -147,7 +149,7 @@ Tipografia
 Títulos: System/San Francisco (iOS) | Roboto (Android)
 Corpo: 14px - 16px
 Pequeno: 12px
-�� Funcionalidades do Admin
+📋 Funcionalidades do Admin
 Dashboard
 Métricas em tempo real
 Gráficos de vendas
@@ -178,7 +180,7 @@ Crie uma branch para sua feature (git checkout -b feature/nova-feature)
 Commit suas mudanças (git commit -m 'Adiciona nova feature')
 Push para a branch (git push origin feature/nova-feature)
 Abra um Pull Request
-�� Scripts Disponíveis
+📝 Scripts Disponíveis
 bash
 Copiar
 
@@ -199,3 +201,36 @@ npm run build
 
 # Limpar cache
 npx expo start --clear
+📄 Licença
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+👨‍💻 Autor
+João Fabris
+
+Desenvolvido com ❤️ como projeto de extensão universitária.
+
+
+www.linkedin.com
+ 
+
+github.com
+
+📞 Suporte
+Se você tiver alguma dúvida ou problema, sinta-se à vontade para:
+
+Abrir uma issue no GitHub
+Entrar em contato via LinkedIn
+Enviar um email
+⭐ Se este projeto foi útil para você, considere dar uma estrela!
+Projeto desenvolvido durante o curso de Análise e Desenvolvimento de Sistemas
+```
+📊 Estatísticas do projeto
+Se quiser adicionar badges de estatísticas:
+
+markdown
+Copiar
+
+![GitHub repo size](https://img.shields.io/github/repo-size/JoaoFabris/foodcode-app)
+![GitHub language count](https://img.shields.io/github/languages/count/JoaoFabris/foodcode-app)
+![GitHub top language](https://img.shields.io/github/languages/top/JoaoFabris/foodcode-app)
+![GitHub last commit](https://img.shields.io/github/last-commit/JoaoFabris/foodcode-app)
