@@ -1,5 +1,3 @@
-pode revisar e ver se tem algo errado, e se esta coerente com o projeto
-
 🍔 FoodCode - App de Delivery com Painel Administrativo
 <div align="center">
 React Native
