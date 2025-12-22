@@ -1,97 +1,146 @@
-# FoodCode - Sistema de Delivery de Comida 🍔
+=======
+# FoodCode
 
-Sistema completo de delivery de comida desenvolvido com React Native/Expo, incluindo área do cliente e painel administrativo.
+## Visão Geral
 
-## 📱 **Funcionalidades**
+O **FoodCode** é um aplicativo mobile desenvolvido com **React Native** e **Expo**, utilizando **Expo Router** para navegação baseada em arquivos. O projeto simula um ecossistema de pedidos de comida, contemplando fluxo de usuário final (catálogo, carrinho, checkout, favoritos) e um **painel administrativo** para gestão de produtos, pedidos e usuários.
 
-### **Cliente:**
--  Navegação e catálogo de produtos
--  Busca e filtros por categoria
--  Carrinho de compras
--  Sistema de login e cadastro
--  Lista de favoritos
--  Checkout e confirmação de pedidos
+Este projeto está sendo desenvolvido no contexto acadêmico (Projeto de Extensão), com foco em boas práticas de arquitetura, organização de código e experiência do usuário.
 
-### **Admin:**
--  Gerenciamento de produtos
--  Gerenciamento de usuários
--  Gerenciamento de pedidos
--  Dashboard administrativo
+---
 
-##  **Como Rodar o Sistema**
+## Tecnologias Utilizadas
 
-### **Pré-requisitos:**
-- Node.js (versão 16+)
-- npm ou yarn
-- Expo CLI
-- Emulador Android/iOS ou dispositivo físico
+* **React Native**
+* **Expo (SDK 54)**
+* **Expo Router** (File-based routing)
+* **TypeScript**
+* **Context API** (gerenciamento de estado)
+* **React Navigation**
+* **Async Storage**
+* **Expo Image / Image Picker**
+* **ESLint**
 
-### **Instalação:**
+---
 
-1. **Clone o repositório:**
-   ```bash
-   git clone [seu-repositorio]
-   cd foodCode
+## Funcionalidades
 
+### Usuário Final
 
-   Instale as dependências:
+* Listagem de produtos por categoria
+* Busca de produtos
+* Visualização de detalhes do produto
+* Adição e remoção de itens no carrinho
+* Checkout e confirmação de pedido
+* Sistema de favoritos
+* Autenticação de usuário
 
-bash
-Copiar
+### Área Administrativa
 
+* Login administrativo
+* Dashboard administrativo
+* Cadastro e listagem de produtos
+* Visualização de pedidos
+* Gerenciamento de usuários
+
+---
+
+## Estrutura do Projeto
+
+```bash
+src/
+├── app/                 # Rotas (Expo Router)
+│   ├── (tabs)/          # Navegação principal por abas
+│   ├── admin/           # Área administrativa
+│   ├── login.tsx        # Login do usuário
+│   ├── checkout.tsx     # Checkout
+│   └── order-confirmation.tsx
+│
+├── components/          # Componentes reutilizáveis
+├── context/             # Contextos globais (Auth, Cart, Products, etc.)
+├── constants/           # Constantes e tema
+├── data/                # Dados mockados (produtos e categorias)
+├── services/            # Serviços e integrações (API)
+├── hooks/               # Hooks customizados
+├── utils/               # Funções utilitárias
+└── types/               # Tipagens globais
+```
+
+---
+
+## Pré-requisitos
+
+* **Node.js** (versão LTS recomendada)
+* **npm** ou **yarn**
+* **Expo CLI**
+* Android Studio (para emulador Android) ou Expo Go
+
+---
+
+## Instalação e Execução
+
+1. Instale as dependências:
+
+```bash
 npm install
-Inicie o servidor de desenvolvimento:
+```
 
-bash
-Copiar
+2. Inicie o projeto:
 
-npm start
-# ou
+```bash
 npx expo start
-Abra o app:
+```
 
-Android: Pressione a ou npx expo start --android
-iOS: Pressione i ou npx expo start --ios
-Web: Pressione w ou npx expo start --web
+3. Execute no ambiente desejado:
 
+* Emulador Android
+* Expo Go (QR Code)
+* Web
 
-   Testes Automatizados com Cypress
-Configuração dos Testes:
-Certifique-se que o Cypress está instalado:
+---
 
-bash
-Copiar
+## Scripts Disponíveis
 
-npm install cypress --save-dev
-Inicie o servidor da aplicação:
+```bash
+npm start           # Inicia o Expo
+npm run android     # Executa no Android
+npm run ios         # Executa no iOS
+npm run web         # Executa no navegador
+npm run lint        # Executa o lint
+npm run reset-project # Reseta o projeto para o estado inicial do Expo
+```
 
-bash
-Copiar
+---
 
-npm start
-Mantenha rodando em uma aba separada do terminal
+## Estado e Arquitetura
 
-Executar Testes:
-Modo Interativo (Recomendado):
-bash
-Copiar
+O gerenciamento de estado é feito via **Context API**, com contextos dedicados para:
 
-npm run cypress:open
-Abre a interface visual do Cypress
-Permite executar testes individualmente
-Melhor para debug e desenvolvimento
-Modo Headless (CI/CD):
-bash
-Copiar
+* Autenticação (`AuthContext`)
+* Carrinho (`CartContext`)
+* Produtos (`ProductsContext`)
+* Favoritos (`FavoritesContext`)
+* Administração (`AdminContext`)
 
-npm run cypress:run
-Executa todos os testes em modo headless
-Gera relatórios e screenshots
-Ideal para integração contínua
-Testes Específicos:
-bash
-Copiar
+Essa abordagem mantém o projeto organizado, escalável e de fácil manutenção.
 
+---
+
+## API / Dados
+
+Atualmente, o projeto utiliza **dados mockados**, localizados em:
+
+```bash
+src/data/
+```
+
+Há também uma camada de serviço preparada para integração com APIs externas:
+
+```bash
+src/services/mealApi.ts
+```
+
+---
 # Executar um teste específico
 npx cypress run --spec "cypress/e2e/01-home-navigation.cy.js"
 
@@ -134,3 +183,23 @@ export default defineConfig({
     screenshotOnRunFailure: true,
   },
 });
+
+## Status do Projeto
+
+🚧 **Em desenvolvimento**
+
+Funcionalidades podem sofrer alterações conforme evolução do projeto acadêmico.
+
+---
+
+## Autor
+
+**João Fabris**
+Projeto desenvolvido para fins acadêmicos no curso de Análise e Desenvolvimento de Sistemas.
+
+---
+
+## Licença
+
+Este projeto é de uso acadêmico e educacional.
+>>>>>>> b0e5dc96c0020f0ac49ef6d1a9286ec95e066ce2
