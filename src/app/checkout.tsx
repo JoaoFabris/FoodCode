@@ -3,12 +3,11 @@ import { Header } from '@react-navigation/elements';
 import { Stack, router } from 'expo-router';
 import React, { useState } from 'react';
 import {
-  Alert,
   ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from 'react-native';
 import { COLORS, SIZES } from '../constants/theme';
 import { useAuth } from '../context/AuthContext';
@@ -24,26 +23,18 @@ export default function CheckoutScreen() {
     await logout();
   };
 
-  const handlePayment = async () => {
-    setIsProcessing(true);
+ const handlePayment = async () => {
+  setIsProcessing(true);
 
-    // Simular processamento do pagamento
-    setTimeout(() => {
-      setIsProcessing(false);
-      clearCart();
-      
-      Alert.alert(
-        ' Pedido realizado!',
-        'Seu pedido foi confirmado e será preparado em breve.',
-        [
-          {
-            text: 'OK',
-            onPress: () => router.replace('/order-confirmation')
-          }
-        ]
-      );
-    }, 2000);
-  };
+  // Simular processamento do pagamento
+  setTimeout(() => {
+    setIsProcessing(false);
+    clearCart();
+    
+    // ✅ Ir direto para a confirmação (funciona em todas as plataformas)
+    router.replace('/order-confirmation');
+  }, 2000);
+};
 
   // ... resto do código permanece igual
   const formatPrice = (price: number) => {

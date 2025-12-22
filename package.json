@@ -10,7 +10,9 @@
     "web": "expo start --web",
     "lint": "expo lint",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "build:web": "expo export --platform web --output-dir docs",
+    "deploy:web": "npm run build:web && git add docs && git commit -m \"deploy: update web build\" && git push"
   },
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "^7.27.1",

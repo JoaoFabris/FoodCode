@@ -13,6 +13,7 @@ import {
   Dimensions,
   Image,
   Linking,
+  Platform,
   ScrollView,
   StyleSheet,
   Text,
@@ -72,7 +73,7 @@ export default function ProductDetailScreen() {
         strCategory: mealData.strCategory,
         strArea: mealData.strArea,
         strInstructions: mealData.strInstructions || 'Instruções não disponíveis',
-        strMealThumb: mealData.strMealThumb,
+          strMealThumb: getHighResImage(mealData.strMealThumb),
         strYoutube: mealData.strYoutube,
         ingredients: extractIngredients(mealData),
         price: generateRandomPrice(),
@@ -88,6 +89,16 @@ export default function ProductDetailScreen() {
       setIsLoading(false);
     }
   };
+
+  const getHighResImage = (originalUrl: string): string => {
+  // Tentar diferentes variações de alta resolução
+  if (originalUrl) {
+    // Remover '/preview' se existir e tentar versão maior
+    const highResUrl = originalUrl.replace('/preview', '');
+    return highResUrl;
+  }
+  return originalUrl;
+};
 
   const extractIngredients = (meal: any): string[] => {
     const ingredients: string[] = [];
@@ -480,13 +491,26 @@ const styles = StyleSheet.create({
     marginRight: 8,
   },
   imageContainer: {
-    position: 'relative',
-  },
-  productImage: {
-    width: width,
-    height: width * 0.75,
-    resizeMode: 'cover',
-  },
+  position: 'relative',
+  ...(Platform.OS === 'web' && {
+    alignItems: 'center',
+  }),
+},
+
+ productImage: {
+  width: Platform.select({
+    web: Math.min(width, 600),
+    default: width, 
+  }),
+  height: Platform.select({
+    web: Math.min(width, 600) * 0.6, 
+    default: width * 0.75,
+  }),
+  resizeMode: 'cover',
+  ...(Platform.OS === 'web' && {
+    borderRadius: 12, 
+  }),
+},
   tagsOverlay: {
     position: 'absolute',
     top: 16,
