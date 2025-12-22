@@ -1,51 +1,136 @@
-# Welcome to your Expo app 👋
+# FoodCode - Sistema de Delivery de Comida 🍔
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Sistema completo de delivery de comida desenvolvido com React Native/Expo, incluindo área do cliente e painel administrativo.
 
-## Get started
+## 📱 **Funcionalidades**
 
-1. Install dependencies
+### **Cliente:**
+-  Navegação e catálogo de produtos
+-  Busca e filtros por categoria
+-  Carrinho de compras
+-  Sistema de login e cadastro
+-  Lista de favoritos
+-  Checkout e confirmação de pedidos
 
+### **Admin:**
+-  Gerenciamento de produtos
+-  Gerenciamento de usuários
+-  Gerenciamento de pedidos
+-  Dashboard administrativo
+
+##  **Como Rodar o Sistema**
+
+### **Pré-requisitos:**
+- Node.js (versão 16+)
+- npm ou yarn
+- Expo CLI
+- Emulador Android/iOS ou dispositivo físico
+
+### **Instalação:**
+
+1. **Clone o repositório:**
    ```bash
-   npm install
-   ```
+   git clone [seu-repositorio]
+   cd foodCode
 
-2. Start the app
 
-   ```bash
-   npx expo start
-   ```
+   Instale as dependências:
 
-In the output, you'll find options to open the app in a
+bash
+Copiar
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+npm install
+Inicie o servidor de desenvolvimento:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+bash
+Copiar
 
-## Get a fresh project
+npm start
+# ou
+npx expo start
+Abra o app:
 
-When you're ready, run:
+Android: Pressione a ou npx expo start --android
+iOS: Pressione i ou npx expo start --ios
+Web: Pressione w ou npx expo start --web
 
-```bash
-npm run reset-project
-```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+   Testes Automatizados com Cypress
+Configuração dos Testes:
+Certifique-se que o Cypress está instalado:
 
-## Learn more
+bash
+Copiar
 
-To learn more about developing your project with Expo, look at the following resources:
+npm install cypress --save-dev
+Inicie o servidor da aplicação:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+bash
+Copiar
 
-## Join the community
+npm start
+Mantenha rodando em uma aba separada do terminal
 
-Join our community of developers creating universal apps.
+Executar Testes:
+Modo Interativo (Recomendado):
+bash
+Copiar
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-# FoodCode
+npm run cypress:open
+Abre a interface visual do Cypress
+Permite executar testes individualmente
+Melhor para debug e desenvolvimento
+Modo Headless (CI/CD):
+bash
+Copiar
+
+npm run cypress:run
+Executa todos os testes em modo headless
+Gera relatórios e screenshots
+Ideal para integração contínua
+Testes Específicos:
+bash
+Copiar
+
+# Executar um teste específico
+npx cypress run --spec "cypress/e2e/01-home-navigation.cy.js"
+
+# Executar grupo de testes
+npx cypress run --spec "cypress/e2e/*-admin-*.cy.js"
+ Cenários de Teste Implementados
+#	Cenário	Arquivo	Status
+1	Navegação na Home	01-home-navigation.cy.js	
+2	Funcionalidade de Busca	02-search-functionality.cy.js	
+3	Carrinho de Compras	03-carrinho-compras.cy.js	
+4	Sistema de Login	04-sistema-login.cy.js	
+5	Admin - Produtos	05-admin-produtos.cy.js	
+6	Admin - Usuários	06-admin-usuarios.cy.js	
+7	Admin - Pedidos	07-admin-pedidos.cy.js	
+
+
+
+Cobertura dos Testes:
+ Fluxos de usuário final (navegação, busca, carrinho, login)
+ Fluxos administrativos (gestão de produtos, usuários, pedidos)
+ Validações de formulários e estados de erro
+ Responsividade em diferentes tamanhos de tela
+ Estados de loading e feedback visual
+ Configuração do Cypress
+Configuração Principal (cypress.config.ts):
+typescript
+Copiar
+
+import { defineConfig } from 'cypress';
+
+export default defineConfig({
+  e2e: {
+    baseUrl: 'http://localhost:8081',
+    defaultCommandTimeout: 10000,
+    requestTimeout: 10000,
+    responseTimeout: 10000,
+    viewportWidth: 1280,
+    viewportHeight: 720,
+    video: false,
+    screenshotOnRunFailure: true,
+  },
+});
