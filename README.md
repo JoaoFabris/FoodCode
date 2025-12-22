@@ -202,4 +202,4 @@ Projeto desenvolvido para fins acadêmicos no curso de Análise e Desenvolviment
 ## Licença
 
 Este projeto é de uso acadêmico e educacional.
->>>>>>> b0e5dc96c0020f0ac49ef6d1a9286ec95e066ce2
+
