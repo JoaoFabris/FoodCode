@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "expo start",
+    
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -11,7 +12,7 @@
     "lint": "expo lint",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "build:web": "expo export --platform web --output-dir docs",
+    "build:web": "npx expo export --platform web --output-dir docs && sed -i 's/src=\"\\\//src=\"\\\/FoodCode\\\//g' docs/index.html && sed -i 's/href=\"\\\//href=\"\\\/FoodCode\\\//g' docs/index.html && touch docs/.nojekyll",
     "deploy:web": "npm run build:web && git add docs && git commit -m \"deploy: update web build\" && git push"
   },
   "dependencies": {
